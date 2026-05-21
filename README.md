@@ -1,6 +1,4 @@
 <img src="simplefin2polars_hex.png" width="200"/>
-</br>
-</br>
 
 # simplefin2polars
 
