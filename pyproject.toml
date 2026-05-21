@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simplefin2polars"
+version = "0.1.0"
+description = "Query the SimpleFIN protocol and parse responses into Polars DataFrames"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Daniel Riggins", email = "daniel.riggins@protonmail.com" }
+]
+keywords = ["simplefin", "polars", "banking", "finance", "dataframe"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "polars>=0.20",
+    "requests>=2.28",
+    "keyring>=23.0",
+    "tzdata>=2023.3; platform_system=='Windows'",
+]
+
+[project.urls]
+Homepage = "https://github.com/andtheWings/simplefin2polars"
+Repository = "https://github.com/andtheWings/simplefin2polars"
+Issues = "https://github.com/andtheWings/simplefin2polars/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["simplefin2polars"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
