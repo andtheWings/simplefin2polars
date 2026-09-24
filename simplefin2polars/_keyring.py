@@ -1,13 +1,13 @@
 """OS credential-store integration for SimpleFIN Access URLs.
 
-Access URLs are stored under the fixed service name "simplefinr" (matching
+Access URLs are stored under the fixed service name "simplefin" (matching
 the R package's namespace so credentials are interoperable) with a
 user-chosen key as the account/username field.
 """
 
 import polars as pl
 
-_SFIN_SERVICE = "simplefinr"
+_SFIN_SERVICE = "simplefin"
 
 
 def _get_keyring():
